@@ -8,8 +8,11 @@ on:
         description: 'SSH connection to Actions'
         required: true
         default: 'false'
-#  schedule:
-#    - cron: 5 6 * * 0
+#   watch:
+#     types: started
+    
+  #schedule:
+     #- cron: 00 22 * * *
   workflow_dispatch:
   watch:
     types: started
