@@ -1,6 +1,13 @@
 name: X86-OpenWrt
 
 on:
+  repository_dispatch:
+  workflow_dispatch:
+    inputs:
+      ssh:
+        description: 'SSH connection to Actions'
+        required: true
+        default: 'false'
 #  schedule:
 #    - cron: 5 6 * * 0
   workflow_dispatch:
