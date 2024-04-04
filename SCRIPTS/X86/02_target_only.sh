@@ -33,6 +33,9 @@ sed -i -e 's/^\(.\).*vermagic$/\1cp $(TOPDIR)\/.vermagic $(LINUX_DIR)\/.vermagic
 # Modify default IP
 sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
 
+# 个性签名,默认增加年月日[$(TZ=UTC-8 date "+%Y.%m.%d")]
+export Customized_Information="$(TZ=UTC-8 date "+%Y.%m.%d") By StarXu"  # 个性签名,你想写啥就写啥，(填0为不作修改)
+
 # 预配置一些插件
 cp -rf ../PATCH/files ./files
 
